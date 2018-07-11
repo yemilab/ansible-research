@@ -2,6 +2,8 @@
 
 Ansible provisioning script for CUP development server (Currently only supported CentOS 7).
 
+- TeX Live is not included. If you want to install TeX Live, please go to https://www.tug.org/texlive/ .
+
 ## How to use Ansible playbook
 
 Install `epel-release`, `git`, `ansible`.
