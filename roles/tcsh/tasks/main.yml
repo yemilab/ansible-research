@@ -1,0 +1,4 @@
+- name: Install tcsh
+  yum:
+    name: tcsh
+    state: present

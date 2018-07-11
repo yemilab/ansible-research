@@ -1,0 +1,29 @@
+- name: Install ROOT dependencies
+  yum:
+    - name: "{{ item }}"
+    - state: present
+  with_items:
+    - cmake3
+    - clang
+    - libX11-devel
+    - libXpm-devel
+    - libXft-devel
+    - libXext-devel
+    - redhat-lsb-core
+    - gcc-gfortran
+    - openssl-devel
+    - pcre-devel
+    - mesa-libGL-devel
+    - mesa-libGLU-devel
+    - glew-devel
+    - ftgl-devel
+    - mysql-devel
+    - fftw-devel
+    - cfitsio-devel
+    - graphviz-devel
+    - avahi-compat-libdns_sd-devel
+    - python
+    - python-devel
+    - libxml2-devel
+    - krb5-devel
+    - gsl-devel

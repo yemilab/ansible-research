@@ -1,0 +1,22 @@
+- name: Install Git
+  yum:
+    name: git
+    state: present
+
+- name: Install Editors
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - emacs
+    - vim
+
+- name: Install xorg-x11-xauth
+  yum:
+    name: xorg-x11-xauth
+    state: present
+
+- name: Install development tools group
+  yum:
+    name: "@Development tools"
+    state: present
