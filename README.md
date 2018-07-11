@@ -1,4 +1,4 @@
-# ansible-cup-dev
+# ansible-cup-devel
 
 Ansible provisioning script for CUP development server (Currently only supported CentOS 7).
 
