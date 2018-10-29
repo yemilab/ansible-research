@@ -1,3 +1,8 @@
+- name: Add EPEL repository
+  yum:
+    name: epel-release
+    state: present
+
 - name: Install tcsh
   yum:
     name: tcsh
