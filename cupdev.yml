@@ -1,0 +1,7 @@
+---
+- hosts: logins
+  remote_user: root
+  roles:
+    - basic
+    - build-root
+    - dev-hdf5

@@ -1,6 +1,21 @@
+- name: Install tcsh
+  yum:
+    name: tcsh
+    state: present
+
+- name: Install development tools group
+  yum:
+    name: "@Development tools"
+    state: present
+
 - name: Install Git
   yum:
     name: git
+    state: present
+
+- name: Install Perl
+  yum:
+    name: perl
     state: present
 
 - name: Install Editors
@@ -14,9 +29,4 @@
 - name: Install xorg-x11-xauth
   yum:
     name: xorg-x11-xauth
-    state: present
-
-- name: Install development tools group
-  yum:
-    name: "@Development tools"
     state: present

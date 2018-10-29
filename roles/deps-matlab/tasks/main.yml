@@ -1,4 +1,0 @@
-- name: Install redhat-lsb
-  yum:
-    name: redhat-lsb
-    state: present

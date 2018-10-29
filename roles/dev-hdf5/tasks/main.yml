@@ -1,4 +1,4 @@
-- name: Install hdf5-dev
+- name: Install hdf5-devel
   yum:
-    name: tcsh
+    name: hdf5-devel
     state: present
