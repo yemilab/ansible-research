@@ -1,0 +1,7 @@
+- name: Install SQLite3
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - sqlite
+    - sqlite-devel
