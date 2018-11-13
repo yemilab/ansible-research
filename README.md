@@ -54,3 +54,7 @@ $ ansible-playbook -i hosts cluster.yml
 ## Roles
 
 - `basic`: Install Emacs, Vim, Git, GCC
+
+## Roles
+
+- `dev-sqlite`: Runcatalog
