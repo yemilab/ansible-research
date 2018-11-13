@@ -6,3 +6,4 @@
     - build-root
     - dev-hdf5
     - dev-sqlite
+    - tools
