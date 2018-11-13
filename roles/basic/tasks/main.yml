@@ -25,8 +25,11 @@
 
 - name: Install Perl
   yum:
-    name: perl
+    name: "{{ item }}"
     state: present
+  with_items:
+    - perl
+    - perl-Digest-MD5
 
 - name: Install Editors
   yum:
