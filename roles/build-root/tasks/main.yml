@@ -38,3 +38,6 @@
     - libxml2-devel
     - gsl-devel
     - krb5-devel
+    - libjpeg-turbo-devel
+    - libtiff-devel
+    - libpng-devel
