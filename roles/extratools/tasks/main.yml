@@ -3,5 +3,13 @@
     name: "{{ item }}"
     state: present
   with_items:
+    - xterm
     - vim-X11
     - evince
+    - mlocate
+    - cvs
+
+- name: Disable mlocate cron job
+  file:
+    path: /etc/cron.daily/mlocate
+    mode: "u-x,g-x,o-x"

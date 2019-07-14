@@ -31,6 +31,11 @@
     - perl
     - perl-Digest-MD5
 
+- name: Install lsof
+  yum:
+    name: lsof
+    state: present
+
 - name: Install Editors
   yum:
     name: "{{ item }}"

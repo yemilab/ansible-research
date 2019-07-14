@@ -4,7 +4,6 @@
     state: present
   with_items:
     - git
-    - cmake3
     - gcc-c++
     - gcc
     - clang

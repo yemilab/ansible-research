@@ -1,4 +1,12 @@
 ---
+- hosts: nodes
+  remote_user: root
+  roles:
+    - basic
+    - build-root
+    - dev-hdf5
+    - dev-sqlite
+    - dev-cosine
 - hosts: logins
   remote_user: root
   roles:
@@ -6,4 +14,5 @@
     - build-root
     - dev-hdf5
     - dev-sqlite
+    - dev-cosine
     - extratools
