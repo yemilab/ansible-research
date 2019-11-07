@@ -1,7 +1,6 @@
 - name: Install OpenGL tools
   yum:
-    name: "{{ item }}"
+    name:
+      - mesa-dri-drivers
+      - glx-utils
     state: present
-  with_items:
-    - mesa-dri-drivers
-    - glx-utils

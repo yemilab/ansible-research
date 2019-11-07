@@ -1,17 +1,16 @@
 - name: Install Motif
   yum:
-    name: "{{ item }}"
+    name:
+      - motif
+      - motif-devel
+      - qt
+      - qt-devel
+      - PyQt4
+      - PyQt4-devel
+      - plplot
+      - plplot-devel
+      - plplot-qt
+      - plplot-pyqt
+      - xerces-c
+      - xerces-c-devel
     state: present
-  with_items:
-    - motif
-    - motif-devel
-    - qt
-    - qt-devel
-    - PyQt4
-    - PyQt4-devel
-    - plplot
-    - plplot-devel
-    - plplot-qt
-    - plplot-pyqt
-    - xerces-c
-    - xerces-c-devel

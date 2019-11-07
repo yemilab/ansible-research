@@ -1,42 +1,40 @@
 - name: Install required packages for ROOT
   yum:
-    name: "{{ item }}"
+    name:
+      - git
+      - gcc-c++
+      - gcc
+      - clang
+      - binutils
+      - libX11-devel
+      - libXpm-devel
+      - libXft-devel
+      - libXext-devel
+      - python
+      - redhat-lsb-core
     state: present
-  with_items:
-    - git
-    - gcc-c++
-    - gcc
-    - clang
-    - binutils
-    - libX11-devel
-    - libXpm-devel
-    - libXft-devel
-    - libXext-devel
-    - python
-    - redhat-lsb-core
 
 - name: Install addtional packages for ROOT
   yum:
-    name: "{{ item }}"
+    name:
+      - gcc-gfortran
+      - openssl-devel
+      - pcre-devel
+      - mesa-libGL-devel
+      - mesa-libGLU-devel
+      - glew-devel
+      - ftgl-devel
+      - mysql-devel
+      - fftw-devel
+      - cfitsio-devel
+      - graphviz-devel
+      - avahi-compat-libdns_sd-devel
+      - openldap-devel
+      - python-devel
+      - libxml2-devel
+      - gsl-devel
+      - krb5-devel
+      - libjpeg-turbo-devel
+      - libtiff-devel
+      - libpng-devel
     state: present
-  with_items:
-    - gcc-gfortran
-    - openssl-devel
-    - pcre-devel
-    - mesa-libGL-devel
-    - mesa-libGLU-devel
-    - glew-devel
-    - ftgl-devel
-    - mysql-devel
-    - fftw-devel
-    - cfitsio-devel
-    - graphviz-devel
-    - avahi-compat-libdns_sd-devel
-    - openldap-devel
-    - python-devel
-    - libxml2-devel
-    - gsl-devel
-    - krb5-devel
-    - libjpeg-turbo-devel
-    - libtiff-devel
-    - libpng-devel
