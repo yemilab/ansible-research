@@ -15,4 +15,6 @@
     - dev-hdf5
     - dev-sqlite
     - dev-cosine
-    - extratools
+    - extra-tools
+    - analysis-tools
+    - monitoring-tools

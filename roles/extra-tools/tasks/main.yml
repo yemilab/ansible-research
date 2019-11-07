@@ -1,0 +1,36 @@
+- name: Install extra tools
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - mlocate
+    - cvs
+
+- name: Disable mlocate cron job
+  file:
+    path: /etc/cron.daily/mlocate
+    mode: "u-x,g-x,o-x"
+
+- name: Install viewers
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - evince
+    - eog
+
+- name: Install editors
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - vim
+    - vim-X11
+
+- name: Install terminals
+  yum:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - xterm
+    - gnome-terminal
