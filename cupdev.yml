@@ -7,7 +7,8 @@
     - dev-hdf5
     - dev-sqlite
     - dev-cosine
-- hosts: logins
+
+- hosts: logins1
   remote_user: root
   roles:
     - basic
@@ -15,6 +16,7 @@
     - dev-hdf5
     - dev-sqlite
     - dev-cosine
+    - dev-openjdk
     - extra-tools
     - analysis-tools
     - monitoring-tools
