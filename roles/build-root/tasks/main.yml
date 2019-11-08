@@ -13,6 +13,7 @@
       - python
       - redhat-lsb-core
     state: present
+  when: ansible_facts['distribution'] == 'CentOS' and ansible_facts['distribution_major_version']|int <= 7
 
 - name: Install addtional packages for ROOT
   yum:
@@ -38,3 +39,46 @@
       - libtiff-devel
       - libpng-devel
     state: present
+  when: ansible_facts['distribution'] == 'CentOS' and ansible_facts['distribution_major_version']|int <= 7
+
+- name: Install required packages for ROOT
+  yum:
+    name:
+      - git
+      - gcc-c++
+      - gcc
+      - clang
+      - binutils
+      - libX11-devel
+      - libXpm-devel
+      - libXft-devel
+      - libXext-devel
+      - redhat-lsb-core
+    state: present
+  when: ansible_facts['distribution'] == 'CentOS' and ansible_facts['distribution_major_version']|int >= 8
+
+- name: Install addtional packages for ROOT
+  yum:
+    name:
+      - gcc-gfortran
+      - openssl-devel
+      - pcre-devel
+      - mesa-libGL-devel
+      - mesa-libGLU-devel
+      - glew-devel
+      - ftgl-devel
+      - mysql-devel
+      - fftw-devel
+      - cfitsio-devel
+      - graphviz-devel
+      - avahi-compat-libdns_sd-devel
+      - openldap-devel
+      - libxml2-devel
+      - gsl-devel
+      - krb5-devel
+      - libjpeg-turbo-devel
+      - libtiff-devel
+      - libpng-devel
+    state: present
+    enablerepo: PowerTools
+  when: ansible_facts['distribution'] == 'CentOS' and ansible_facts['distribution_major_version']|int >= 8

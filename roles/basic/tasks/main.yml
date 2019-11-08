@@ -35,7 +35,7 @@
 
 - name: Install Editors
   yum:
-    name: ['emacs', 'vim']
+    name: ['emacs', 'vim', 'vim-X11']
     state: present
 
 - name: Install xorg-x11-xauth

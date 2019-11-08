@@ -1,27 +1,13 @@
-- name: Install extra tools
+- name: Install CVS
   yum:
-    name:
-      - mlocate
-      - cvs
+    name: cvs
     state: present
-
-- name: Disable mlocate cron job
-  file:
-    path: /etc/cron.daily/mlocate
-    mode: "u-x,g-x,o-x"
 
 - name: Install viewers
   yum:
     name:
       - evince
       - eog
-    state: present
-
-- name: Install editors
-  yum:
-    name:
-      - vim
-      - vim-X11
     state: present
 
 - name: Install terminals

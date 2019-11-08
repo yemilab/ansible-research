@@ -2,3 +2,11 @@
   yum:
     name: hdf5-devel
     state: present
+  when: ansible_facts['distribution'] == 'CentOS' and ansible_facts['distribution_major_version']|int <= 7
+
+- name: Install hdf5-devel
+  dnf:
+    name: hdf5-devel
+    state: present
+    enablerepo: PowerTools
+  when: ansible_facts['distribution'] == 'CentOS' and ansible_facts['distribution_major_version']|int >= 8

@@ -2,6 +2,5 @@
   yum:
     name:
       - iptraf-ng
-      - nethogs
       - iotop
     state: present

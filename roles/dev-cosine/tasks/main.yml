@@ -14,3 +14,14 @@
       - xerces-c
       - xerces-c-devel
     state: present
+  when: ansible_facts['distribution'] == 'CentOS' and ansible_facts['distribution_major_version']|int <= 7
+
+- name: Install Motif
+  yum:
+    name:
+      - motif
+      - motif-devel
+      - xerces-c
+      - xerces-c-devel
+    state: present
+  when: ansible_facts['distribution'] == 'CentOS' and ansible_facts['distribution_major_version']|int >= 8

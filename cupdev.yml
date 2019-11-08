@@ -1,14 +1,27 @@
 ---
-- hosts: nodes
-  remote_user: root
-  roles:
-    - basic
-    - build-root
-    - dev-hdf5
-    - dev-sqlite
-    - dev-cosine
+#- hosts: nodes
+#  remote_user: root
+#  roles:
+#    - basic
+#    - build-root
+#    - dev-hdf5
+#    - dev-sqlite
+#    - dev-cosine
+#
+#- hosts: logins1
+#  remote_user: root
+#  roles:
+#    - basic
+#    - build-root
+#    - dev-hdf5
+#    - dev-sqlite
+#    - dev-cosine
+#    - dev-openjdk
+#    - extra-tools
+#    - analysis-tools
+#    - monitoring-tools
 
-- hosts: logins1
+- hosts: logins2
   remote_user: root
   roles:
     - basic
@@ -20,3 +33,4 @@
     - extra-tools
     - analysis-tools
     - monitoring-tools
+    - centos8stream-tools
