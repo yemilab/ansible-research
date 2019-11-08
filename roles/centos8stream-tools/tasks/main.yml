@@ -1,7 +1,19 @@
-- name: Install tools
+- name: Install Python
   yum:
     name:
-      - texlive
-      - golang
+      - python3
+      - python36-devel
+    state: present
+  when: ansible_facts['distribution'] == 'CentOS' and ansible_facts['distribution_major_version']|int >= 8
+
+- name: Set default Python
+  alternatives:
+    name: python
+    path: /usr/bin/python3
+  when: ansible_facts['distribution'] == 'CentOS' and ansible_facts['distribution_major_version']|int >= 8
+
+- name: Install Go
+  yum:
+    name: golang
     state: present
   when: ansible_facts['distribution'] == 'CentOS' and ansible_facts['distribution_major_version']|int >= 8
